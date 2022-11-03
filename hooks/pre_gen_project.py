@@ -1,6 +1,10 @@
 class PreHook():
     def __init__(self):
         pass
+    def read_defaults(self):
+        import os
+        import yaml
+        
 
 def deprecation_warning():
     print("""
