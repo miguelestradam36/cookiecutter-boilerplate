@@ -83,6 +83,12 @@ class TestCookieSetup(object):
         assert makefile_path.exists()
         assert no_curlies(makefile_path)
 
+    def test_build(self):
+        makefile_path = self.path / 'Makefile'
+        assert makefile_path.exists()
+        assert no_curlies(makefile_path)
+
+
     def test_folders(self):
         expected_dirs = [
             'data',
