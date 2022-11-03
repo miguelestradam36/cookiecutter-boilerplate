@@ -1,4 +1,4 @@
-class PostHook():
+class PreHook():
     def __init__(self):
         pass
 
