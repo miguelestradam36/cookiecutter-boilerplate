@@ -1,0 +1,11 @@
+project:
+  name: {{cookiecutter.project_name}}
+  repo_name: {{cookiecutter.repo_name}}
+  repo_name: {{cookiecutter.repo_name}}
+  aws_connector: {{cookiecutter.aws_connector}}
+defaults:
+  installs:
+    - mkdocs
+    - mkdocs-cinder
+    - cookiecutter
+    - pytest

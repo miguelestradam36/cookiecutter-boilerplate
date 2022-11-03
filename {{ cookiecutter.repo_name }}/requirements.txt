@@ -1,6 +1,6 @@
 # local package
 -e .
-
+tox
 # external requirements
 click
 Sphinx
