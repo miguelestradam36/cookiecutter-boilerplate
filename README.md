@@ -26,7 +26,12 @@ $ conda install cookiecutter
 ### Running the tests
 ------------
 
-    py.test tests
+```python
+assure 'pip install pytest' 
+```
+or installing the development requirements, once that is done:
+
+    pytest tests
 
 ### Poetry usage
 ------------
