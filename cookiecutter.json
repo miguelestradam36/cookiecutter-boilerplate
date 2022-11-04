@@ -5,8 +5,10 @@
     "description": "A short description of the project.",
     "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
     "makefile": ["Included", "Not included"],
+    "poetry": ["Included", "Not included"],
+    "tests": ["Included", "Not included"],
     "installs": ["Automatic", "Manual"],
-    "aws_connector": ["Yes", "No"],
+    "connectors_modules": ["Included", "Not included"],
     "_copy_without_render": [
         "{{cookiecutter.repo_name}}/{{cookiecutter.project_name}}/src/modules",
         "{{cookiecutter.repo_name}}/{{cookiecutter.project_name}}/src/models"
