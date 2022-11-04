@@ -1,0 +1,14 @@
+name: Test CI/CD
+
+on: push
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save action
+        env:
+          ENVIR: Trying environmental settings
+        run: |
+          echo $ENVIR.
