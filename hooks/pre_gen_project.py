@@ -11,6 +11,7 @@ class PreHook():
         self.installments = self.installments.strip()
         #Init logging
         self.init_logging()
+        self.log.info("Started pre-hook class object")
 
     def read_defaults(self)->None:
         try:
@@ -52,7 +53,7 @@ class PreHook():
             fmt=f"%(levelname)s %(asctime)s (%(relativeCreated)d) \t %(pathname)s F%(funcName)s L%(lineno)s - %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S",
         )
-        fileHandler = logging.FileHandler(filename='installments.log')
+        fileHandler = logging.FileHandler(filename='pre-hook.log')
         fileHandler.setFormatter(logFileFormatter)
         fileHandler.setLevel(level=logging.INFO)
         logging.basicConfig(level=logging.INFO)

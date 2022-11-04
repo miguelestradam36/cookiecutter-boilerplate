@@ -11,6 +11,8 @@ defaults:
     - mkdocs-cinder
     - cookiecutter
     - pytest
+    - poetry
+    - poetry-lock-package
     - tox
     - click # external requirements
     - Sphinx

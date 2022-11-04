@@ -2,7 +2,6 @@ import sys
 
 REQUIRED_PYTHON = "{{ cookiecutter.python_interpreter }}"
 
-
 def main():
     system_major = sys.version_info.major
     if REQUIRED_PYTHON == "python":
