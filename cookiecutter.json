@@ -5,5 +5,9 @@
     "description": "A short description of the project.",
     "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
     "installs": ["Automatic", "Manual"],
-    "aws_connector": ["Yes", "No"]
+    "aws_connector": ["Yes", "No"],
+    "_copy_without_render": [
+        "{{cookiecutter.repo_name}}/{{cookiecutter.project_name}}/src/modules",
+        "{{cookiecutter.repo_name}}/{{cookiecutter.project_name}}/src/models"
+    ]
 }
