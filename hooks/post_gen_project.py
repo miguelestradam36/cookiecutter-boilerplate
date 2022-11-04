@@ -6,7 +6,8 @@ class PostHook():
         self.REMOVE_PATHS = [
             '{% if cookiecutter.makefile != "Included" %} Makefile {% endif %}',
             '{% if cookiecutter.poetry != "Included" %} pyproject.toml {% endif %}',
-            '{% if cookiecutter.tests != "Included" %} {{cookiecutter.repo_name}}\{{cookiecutter.project_name}}\src\tests {% endif %}'
+            '{% if cookiecutter.connectors_modules != "Included" %} {{cookiecutter.repo_name}}\{{cookiecutter.project_name}}\src\modules\ {% endif %}',
+            '{% if cookiecutter.tests != "Included" %} {{cookiecutter.repo_name}}\{{cookiecutter.project_name}}\src\tests\ {% endif %}'
         ]
         self.init_logging()
 
@@ -19,7 +20,7 @@ class PostHook():
                 if path and os.path.exists(path):
                     if os.path.isdir(path):
                         os.rmdir(path)
-                        self.log.info("Deleting file: {}".format(path))
+                        self.log.info("Deleting directory: {}".format(path))
                     else:
                         os.unlink(path)
                         self.log.info("Unlinking file: {}".format(path))
@@ -34,7 +35,7 @@ class PostHook():
             fmt=f"%(levelname)s %(asctime)s (%(relativeCreated)d) \t %(pathname)s F%(funcName)s L%(lineno)s - %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S",
         )
-        fileHandler = logging.FileHandler(filename='post-hook.log')
+        fileHandler = logging.FileHandler(filename='{{cookiecutter.project_name}}-post-hook.log')
         fileHandler.setFormatter(logFileFormatter)
         fileHandler.setLevel(level=logging.INFO)
         logging.basicConfig(level=logging.INFO)

@@ -53,7 +53,7 @@ class PreHook():
             fmt=f"%(levelname)s %(asctime)s (%(relativeCreated)d) \t %(pathname)s F%(funcName)s L%(lineno)s - %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S",
         )
-        fileHandler = logging.FileHandler(filename='pre-hook.log')
+        fileHandler = logging.FileHandler(filename='{{cookiecutter.project_name}}-pre-hook.log')
         fileHandler.setFormatter(logFileFormatter)
         fileHandler.setLevel(level=logging.INFO)
         logging.basicConfig(level=logging.INFO)
